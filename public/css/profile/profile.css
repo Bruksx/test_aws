@@ -1,0 +1,480 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(51, 51, 51);
+}
+
+.profile{
+    width: 100%;
+    margin: 0px;
+}
+
+.profileHead{
+    width: 96%;
+    height: 200px;
+    background-image: linear-gradient(to right , rgb(51, 0, 102), rgb(51, 102, 255));
+    display: flex;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 1%;
+}
+.profileHead img{
+    width: 12%;
+    height: 60%;
+    margin-top: 2%;
+    border-radius:80% ;
+    margin-left: 0%;
+    margin-left: 5%;
+    
+}
+.profileHead .row{
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: solid 2px black;
+    border: none;
+}
+.profileHead .row #profile-name{
+    width: 40%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    border: solid 2px black;
+    margin-left: 5%;
+    border: none;
+    
+}
+.profileHead .row #profile-name p{
+    margin-top: 0%;
+    padding-left: 3%;
+    width: 20%;
+    font-weight: 500;
+    border: solid 2px black;
+    font-size: 150%;
+    height: 50px;
+    border: none;
+    color: white;
+    margin-left: 7%;
+    
+}
+.profileHead  .row #current-balance{
+    border: solid 2px black;
+    margin-left: 5%;
+    padding-left: 30%;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+
+
+}
+.profileHead  .row #current-balance h3{
+    font-size: 150%;
+    border: solid 2px black;
+    border: none;
+    color: white;
+    margin-top: 1%;
+    padding-left: 0%;
+}
+.profileHead  .row #current-balance p{
+    font-size: 150%;
+    border: solid 2px black;
+    border: none;
+    color: white;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+/* Navigation */
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0px;
+    
+}
+.navlist{
+    width: 20%;
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: rgb(51, 0, 102);
+    position: relative;
+    margin-left: 10px;
+}
+.navlist ul{
+    list-style: none;
+    justify-content: center;
+    padding: 0px;
+    height: 100%;
+    margin: 0px;
+    background-color: rgb(51, 0, 102);
+}
+
+.navlist ul:hover{
+    background-color: white;
+}
+
+.navlist ul li{
+    display: flex;
+    font-size: larger;
+    font-weight: 500;
+    border: 0.5px solid green;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    background-color: rgb(26, 0, 51);
+    height: 20%;
+}
+
+.navlist ul li:hover{
+    cursor: pointer;
+    color: gray;
+    transition: 0.5s;
+    display: flex;
+    background-color: white;
+}
+.navlist ul li span{
+    display: flex;
+    margin: auto 0px;
+}
+.navlist ul li p{
+    margin-left: 5%;
+    margin-top: 6%;
+}
+  
+/* navlist icon */
+.navlist ul li .fa-angle-right{
+    margin-left: 5%;
+    margin-top: 8%;
+    height: 2%;
+}
+.navlist ul li .bank{
+    margin-left: 5%;
+    margin-top: 8%;
+}
+/** navlist icon **/
+.dashboard{
+    width: 75%;
+    margin-left: 23px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(26, 0, 51);
+    height: 480px;
+
+}
+.dashboard h2{
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    font-size: 30px;
+}
+.dashboard .dashlist{
+    border: solid 2px blue;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    background-color: rgb(51, 0, 102);
+    border: none;
+    border-radius: 10px;
+    margin-left: 2%;
+
+}
+.dashboard .dashlist .balance{
+    margin-left: 5%;
+}
+.dashboard .dashlist .balance h3{
+    color: white;
+}
+.dashboard .dashlist .quick-transaction{
+    margin-left: 20%;
+}
+.dashboard .dashlist .quick-transaction h3{
+    color: mintcream;
+}
+.dashboard .dashlist .quick-transaction p{
+    font-weight: bold;
+}
+.quick-transaction{
+    background-color: rgb(51, 0, 102);
+    width: 50%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+.quick-transaction h3{
+    color: white;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+.quick-transaction .quickTransaction{
+    display: flex;
+    flex-direction: row;
+    overflow: scroll hidden;
+    width: 80%;
+    margin-left: 18%;
+    margin-top: -10px;
+    
+
+}
+.quick-transaction .quickTransaction .debit{
+    width: 15%;
+    height: 30%;
+    text-align: center;
+    margin-left: 13%;
+    border-radius: 10%;
+    background-color: rgb(51, 0, 102);
+    flex-shrink: 0;
+}
+.quick-transaction  #manual{
+    position: absolute;
+    
+    width: 15%;
+    height: 140px;
+    left: 1%;
+    top: 30%;
+    border-radius: 10%;
+    background-color: rgb(51, 0, 102);
+}
+.quick-transaction  #manual p{
+    padding-top: 10%;
+    padding-left: 25%;
+    color: white;
+}
+.quick-transaction  #manual i{
+    font-size: 200%;
+    margin-left: 30%;
+    margin-top: 50%;
+    color: white;
+}
+
+.quick-transaction .quickTransaction .debit p{
+    color: white;
+
+}
+.quick-transaction .quickTransaction .debit img{
+    width: 100%;
+    height: 50%;
+    padding-top: 3%;
+    border-radius: 10%;
+}
+/** Navigation **/
+/* Social */
+.social{
+    width: 100%; 
+}
+
+
+.social h3{
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    font-size: 30px;
+
+}
+.social .bills{
+    border: solid 2pxgreen;
+}
+.social .bills ul{
+    list-style: none;
+    margin-right: 3%;
+    margin-left: 2%;
+}
+.social .bills ul li{
+    margin-left: 3%;
+    margin-top: 3%;
+    
+}  
+.social .bills ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 120%;
+    color: rgb(217, 217, 217);
+}
+.social .sociallist .bills ul li .billsicon{
+    margin-right: 2%;
+    font-size: 150%;
+    color: rgb(217, 217, 217);
+}
+
+/** Social **/
+/* Transition */
+.history{
+    width: 100%; 
+}
+
+.transition{
+    border: solid 2px green;
+    height: 56%;
+    margin-top: 2%;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+}
+.transition h2{
+    margin-top: 1%;
+    margin-left: 2%;
+    color: white;
+    font-size: 30px;
+}
+.transition p{
+    padding-left: 3%;
+    font-weight: 500;
+    color: rgb(217, 217, 217) ;
+}
+
+.transition ul{
+    border: solid 2px white;
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: none;
+    
+    
+}
+.transition .time{
+    margin-top: 1%;
+   border-radius: 10px;
+   background-color: rgb(51, 0, 102);
+   width: 49%;
+   margin-left: -5%;
+}
+.transition .time p{
+    font-size: 70%;
+    margin-top: 0%;
+    padding-left: 1%;
+    color: rgb(217, 217, 217);
+    
+}
+.transition .time .listli{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+}
+.transition .time .listli .word{
+    padding-left: 1%;
+    font-weight: 500;
+    color: rgb(217, 217, 217);
+    width: 100%;
+
+}
+.transition .time .listli .num{ 
+    padding-right: 2%;
+    padding-top: 2%;
+}
+/** Transition **/
+/** Transfer **/
+.transfer{
+    border: solid 2px black;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+.transfer .transferdiv{
+    height: 441px;
+    border-radius: 10px;
+    border: solid 2px greenyellow; 
+    width: 100%;  
+    border: none; 
+}
+
+.transfer h2{
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    font-size: 30px;
+
+}
+.transfer .transferdiv .transferul{
+    list-style: none;
+    border: solid 2px rgb(70, 187, 241);
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: none;
+    
+}
+.transfer .transferdiv .transferul .transferlist{
+    margin-top: 1%;
+    border-radius: 10px;
+    background-color: rgb(51, 0, 102);
+    height: 65px;
+    width: 49%;
+    margin-left: -5%;
+ }
+.transfer .transferdiv .transferul .content{
+    margin-left: 1%;
+    font-weight: 700;
+    margin-top: 1%;
+    color: rgb(217, 217, 217);
+}
+.transfer .transferdiv .transferul .test{
+    width: 98%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(217, 217, 217);
+}
+/* Transfer */
+/* Profile*/
+
+.managementdiv{
+    height: 437px;
+    border-radius: 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.managementdiv h3{
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    font-size: 30px;
+}
+.management .managementdiv ul{
+    list-style: none;
+    
+}
+.managementdiv ul .managementlist{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    border-radius: 10px;
+    background-color: rgb(51, 0, 102);
+    height: 50px;
+    list-style: none;
+    margin-left: -2%;
+    width: 95%;
+}
+.managementdiv ul .managementlist li{
+    width: 90%;
+    height: 40px;
+    font-size: 130%;
+    border-radius: 7px;
+    color: rgb(217, 217, 217);
+    padding-left: 2%;
+    padding-top: 1%;
+
+}
+.managementdiv ul .managementlist .fa-angle-right{
+    width: 3%;
+    height: 40px;
+    margin-left: 1%;
+    font-size: 150%;
+    padding-top: 1%;
+    padding-left: 2%;
+    border-radius: 7px;
+    color: rgb(217, 217, 217);
+}

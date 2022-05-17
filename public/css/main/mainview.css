@@ -1,0 +1,449 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    
+}
+nav{
+    border: solid 3px red;
+    display: flex;
+    border: none;
+    width: 100%;   
+}
+.search{
+    background-color: white;
+    width: 40%;
+    height: 33px; 
+    margin-left: 250px;  
+    border-radius: 10px;
+}
+.search-con{
+    position: absolute;
+    left: 100px;
+    width: 100%;
+    transform:skew(30deg);
+    display: none;
+}
+.cancel{
+    color: white;
+}
+.cancel:hover{
+    cursor: pointer;
+}
+.look{
+    visibility: hidden;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+.delete{
+    visibility: hidden;
+}
+.find{
+    display: none;
+}
+.erase{
+    visibility: hidden;
+}
+.fa-bars{
+    visibility: hidden;
+}
+#navList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border: solid 3px yellow;
+    border: none;
+    width: 120%;
+    padding-left: 40%;
+    transform: skew(-30deg);
+    background-color: rgb(230, 57, 0);  
+    text-decoration: none;
+    margin-left: -20px;
+    height: 40px;
+}
+#navList li{
+    margin-left: 30px;
+    font-size: small;
+    transform: skew(30deg); 
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    color: white;
+}
+#navList li a{
+    text-decoration: none;
+    color: white;
+}
+.lilast{
+    transform: skew(-5deg, 0deg);
+    background-color: rgb(153, 38, 0);
+    position: absolute;
+    right: 0px;
+}
+.lilast li{
+    border: rgb(153, 38, 0) 1px;
+    text-align: right;
+    transform: skew(30deg, 0deg);
+}
+.lilast li:hover{
+    cursor: pointer;
+}
+#navListLast{
+    display: flex;
+    list-style: none;
+    border: solid 3px red;
+    width: 100%;
+    padding-left: 20%;
+    margin-top: 50px;
+    border: none;
+    text-decoration: none;
+}
+#navListLast li{
+    margin-left: 20px;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(13, 13, 13);
+}  
+#navListLast li a{
+    text-decoration: none;
+    color:rgb(13, 13, 13);
+    padding-bottom: 10px;
+    border-bottom: 4px solid white;
+}
+#navListLast li a:hover{
+    border-bottom: 4px solid rgb(230, 57, 0);
+    padding-bottom: 10px;
+    color: rgb(153, 38, 0);
+    transition: 1s;
+}
+.pin img{
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    width: 200px;
+}
+#signInList{
+    display: none;
+}
+/* Banner sexction*/
+.banner{
+    background-image: url("../../img/istockphoto-533498965-170667a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding-left: 100px;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+#head{
+  color: rgb(230, 57, 0);
+  font-size: 50px;
+  margin-bottom:0px ;
+  margin-top: 0px;
+  font-weight: normal;
+}
+#header{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: rgb(204, 0, 0);
+  font-size: 50px;
+  font-weight: normal;
+}
+#form p{
+  text-align: left;
+  color: rgb(255, 153, 0);
+  justify-content: center;
+}
+#form{
+    width: 30%;
+}
+#form ul{
+  border: rgb(230, 57, 0);
+  background-color: rgb(204, 0, 0);
+  width: 25%;
+  padding: 10px;
+  list-style:none ;
+}
+#form ul a{
+   text-decoration: none;
+   color: rgb(255, 153, 0);
+   list-style: none;    
+}
+#text{
+  margin-left: 45%;
+  list-style: none;
+  width: 15%;
+  height: 200px;
+  background-color: rgb(255, 77, 77);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+#text1{
+  margin-top: 20px;
+  height: 60px;
+
+}
+#text1 h2{
+  font-size: 20px;
+  color: rgb(153, 38, 0);
+  margin-left: 50px;
+}
+#text2{
+  display: flex;
+  flex-direction: row;
+}
+#text2 li{
+    margin-left: 50px;
+}
+#text2 li a{
+  text-decoration: none;
+  color: rgb(255, 153, 0);
+  border-bottom: 4px solid rgb(255, 77, 77);
+  font-weight: bolder;
+}
+#text3{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left:100px ;
+}
+#text3 li a{
+  font-size: small;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(255, 153, 0)
+}
+#text2 li a:hover{
+  border-bottom: 4px solid rgb(230, 57, 0);
+  padding-bottom: 0px;
+  color: rgb(153, 38, 0);
+  transition: 1s;
+}
+.signUp{
+    border-radius: 10px;
+    background-color:rgb(255, 77, 77);
+    position: absolute;
+    right: 25%;
+    top: 20px;
+    width: 40%;
+    height: 300px;
+    display: none;
+    
+    
+}
+.signUp ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: solid 2px rgb(22, 204, 218);
+    width: 90%;
+    height: 210px;
+    padding-left: -50px;
+    border: none;
+}
+.signUp .close{
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    font-size: 150%;
+    color: rgb(153, 38, 0);
+}
+.signUp .close:hover{
+    cursor: pointer;
+}
+.signUp .signUpList{
+    list-style: none;
+    margin-left: -20px;
+    margin-top: 10px;
+    border: solid 2px black;
+    width: 48%;
+    border: none;
+}
+.signUp h3{
+    background-color: rgb(153, 38, 0) ;
+    color: white;
+    padding: 5px;
+    width: 70px;
+    margin-left: 300px;
+    border-radius: 10px;
+}
+.signUp h3:hover{
+    cursor: pointer;
+}
+.signUp .signUpList li{
+    font-weight: bolder;
+    color: rgb(153, 38, 0);
+}
+.signUp .signUpList .signUpInput{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    z-index: 0;
+    font-weight: bolder;
+}
+.login{
+    border-radius: 10px;
+    background-color:rgb(255, 77, 77);
+    position: absolute;
+    right: 25%;
+    top: 20px;
+    width: 40%;
+    height: 300px;
+}
+
+.login .loginClose{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 150%;
+    color: rgb(153, 38, 0);
+}
+.login .loginClose:hover{
+    cursor: pointer;
+}
+.login .loginList{
+    list-style: none;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+.login h3{
+    background-color: rgb(153, 38, 0) ;
+    color: white;
+    padding: 5px;
+    width: 70px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.login ul h3:hover{
+    cursor: pointer;
+}
+
+.login .loginList .loginInput{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    z-index: 0;
+    font-weight: bolder;
+}
+
+/* Gallery*/
+.gallery{
+    width: 100%;
+}
+.gallery .head{
+    text-align: center;
+}
+.gallery .head h2{
+    font-size: 30px;
+    color: rgb(92, 92, 138);
+}
+.gallery .head p{
+    color: rgb(92, 92, 138);
+}
+.gallery .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: space-around;
+}
+.gallery .row .pic{
+    width: 23%;
+}
+.pic img{
+    width: 100%;
+    height: 200px;
+}
+.pic h4{
+    color: rgb(92, 92, 138);
+    font-size: 20px;
+}
+
+/* boton*/
+.boton{
+    position: fixed;
+    top: 550px;
+    left: 30px;
+    border-radius: 40px;
+    background-color:rgb(230, 57, 0) ;
+    text-align: center;
+    width: 65px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(0,0,26);
+    display: flex;
+    overflow: hidden;
+}
+.boton:hover{
+    width: 180px;
+    transform: 3s;
+    width: 250px;
+}
+.boton i{
+    font-size: 50px;
+    color: white;
+    margin: 5px 0px;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 0px 1px;
+    padding-left: 10px;
+}
+
+.boton span{
+    width: 80px;
+    color: white;
+    margin: auto 0px;
+    text-align: unset;
+    padding-left: 20px;   
+}
+
+/* footer*/
+footer{
+    display: flex;
+    border: solid 2px rgb(204, 0, 0);
+    background-color: rgb(204, 0, 0);
+    padding: 40px;
+    margin-left: -10px;
+    padding-left: 200px;
+    width: 100%;
+
+}
+.foot{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+.foot li{
+    padding-top: 15px;
+}
+.foot li a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+#last{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 150px;
+   
+}
+#last li{
+    padding: 5px;
+}
+#last li i{
+    color: black;
+    border: solid 2px rgb(204, 0, 0);
+    border-radius: 150px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(255, 153, 0);
+
+    
+}
