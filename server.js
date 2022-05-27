@@ -7,7 +7,7 @@ const mongoose = require("mongoose")
 var session = require('express-session')
 const MongoStore = require("connect-mongo")
 
-//mongoose.connect('mongodb://localhost/my_db')
+mongoose.connect('mongodb://localhost/my_db')
 
 //set view engine
 app.set("view engine", "ejs")
