@@ -30,7 +30,6 @@ function reverseSiblingRadius(){
         bottom_sib.style.borderTopRightRadius = "0px"
 }
 for (let i in nav_list.children){
-    console.log(nav_list.children[i])
     if (typeof nav_list.children[i] === "object"){
         nav_list.children[i].addEventListener("mouseover", siblingRadius)
         nav_list.children[i].addEventListener("mouseout", reverseSiblingRadius)

@@ -181,6 +181,8 @@ nav{
   background-color: rgb(255, 77, 77);
   margin-top: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 #text1{
   margin-top: 20px;
@@ -294,6 +296,7 @@ nav{
     top: 20px;
     width: 40%;
     height: 300px;
+    display: none;
 }
 
 .login .loginClose{

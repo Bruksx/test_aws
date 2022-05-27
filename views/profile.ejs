@@ -17,15 +17,15 @@
                 <img src="img/FB_IMG_1593483223797.jpg" alt="">
                 <div class="row">
                     <div id="profile-name">
-                        <p>Chris</p>
-                        <p>Cadillac</p>
+                        <p><%= data.firstname %></p>
+                        <p><%= data.lastname %></p>
                     </div>
                     
                     <div id="current-balance">
                         <h3>
                             CURRENT BALANCE :
                         </h3>
-                        <P> $240,720.60 </P>
+                        <P> $<%= data.balance %> </P>
                        
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="dashlist">
                         <div class="balance">
                             <h3>Current Balance</h3>
-                            <p style="color: white;"> $240,720 .60</p>
+                            <p style="color: white;"> $<%= data.balance %></p>
                         </div>
                         <div class="balance">
                             <h3>Income</h3>
@@ -126,68 +126,23 @@
                         </h2>
                         <p>Recent Activities</p>
                         <ul>
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">ITunes Gift Card</li>
-                                    <li class="num" style="color: rgb(62, 240, 62);">$400</lI>
+                            <% all_transfers.forEach((transfer)=> { %>
+                                <div class="time">
+                                    <div class="listli">
+                                        <% if (transfer.sender === data.email) { %>
+                                            <li class="word"> <%= transfer.receiver %> </li>
+                                            <li class="num" style="color: red;"> - $<%= transfer.amount %> </lI>
+                                        <% } else { %>
+                                            <li class="word"> <%= transfer.sender %> </li>
+                                            <li class="num" style="color: rgb(62, 240, 62);">  $<%= transfer.amount %>  </lI>
+                                        <% } %>
+
+                                    </div>
+                                    <p> <%= transfer.timestamp %> </p>
                                 </div>
-                                <p>Today,12:45</p>
-                            </div>
+                            <% }) %>
         
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Paypal Transfer</li>
-                                    <li class="num" style="color: rgb(62, 240, 62);">$800</li>
-                                </div>
-                                <p>April 3rd, 20:17</p>
-                            </div>
-        
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Wonder Pizza</li>
-                                    <li class="num" style="color: red;">-$500</li>
-                                </div>   
-                                <p>April 3rd, 13:27</p> 
-                            </div>
-        
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Noble Studio</li>
-                                    <li class="num" style="color: red;">-$650</li>
-                                </div>   
-                                <p>March 27rd, 10: 01</p> 
-                            </div>
-        
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Emma Wilson</li>
-                                    <li class="num" style="color: rgb(62, 240, 62);">$1000</li>
-                                </div>   
-                                <p>March 27rd, 08: 11</p> 
-                            </div>
-        
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Netflix</li>
-                                    <li class="num" style="color: red;">-$350</li>
-                                </div>   
-                                <p>March 26rd, 20: 31</p> 
-                            </div>
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Apple Music</li>
-                                    <li class="num" style="color: red;">-$850</li>
-                                </div>   
-                                <p>March 22rd, 09: 41</p> 
-                            </div>
-        
-                            
-                            <div class="time">
-                                <div class="listli">
-                                    <li class="word">Lydia</li>
-                                    <li class="num" style="color: rgb(62, 240, 62);">$3000</li>
-                                </div>   
-                                <p>March 20rd, 17: 27</p> 
+                           
                         </ul>
                     </div>
                 </div>
@@ -201,28 +156,33 @@
                             <ul class="transferul">
                                 <div class="transferlist">
                                     <li class="content">Receptant Name</li>
-                                    <li><input class="test" type="text"></li>
+                                    <li><input class="test" type="text" name="Receptant Name"></li>
                                 </div>
                                 <div class="transferlist">
                                     <li class="content">Country</li>
-                                    <li><input class="test" type="text"></li>
+                                    <li><input class="test" type="text" name="country"></li>
                                 </div>
                                 <div class="transferlist">
                                     <li class="content">Bank</li>
-                                    <li><input class="test" type="text"></li>
+                                    <li><input class="test" type="text" name="bank"></li>
                                 </div>
                                 <div class="transferlist">
-                                    <li class="content">Account</li>
-                                    <li><input class="test"  type="text"></li>
+                                    <li class="content">Email</li>
+                                    <li><input class="test"  type="text" name="email"></li>
                                 </div>
                                 <div class="transferlist">
                                     <li class="content">Amount</li>
-                                    <li><input class="test" type="text"></li>
+                                    <li><input class="test" type="number" name="amount"></li>
                                 </div>
                                 <div class="transferlist">
                                     <li class="content">Pin</li>
-                                    <li><input class="test"  type="text"></li>
+                                    <li><input class="test"  type="password" name="password"></li>
                                 </div>
+                                <div class="transferlist">
+                                    <input id="transfer" type="button" value="Transfer" style="display: block;">
+                                </div>
+
+                            
                             </ul>
                     </div>
                 </div>
@@ -252,7 +212,8 @@
         
 
         
-       
+    
         <script src="js/profile.js"></script>
+        <script src="js/profileauth.js"></script>
     </body>
 </html>

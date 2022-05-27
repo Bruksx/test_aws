@@ -41,9 +41,7 @@ body{
     height: 30px;
     display: flex;
     flex-direction: row;
-    padding-left: 2%;
     border: solid 2px black;
-    margin-left: 5%;
     border: none;
     
 }
