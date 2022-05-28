@@ -15,16 +15,16 @@ app.use(express.static("public"))
 app.use(body_parser.json())
 app.use(upload.array())
 app.use(body_parser.urlencoded({extended:true}))
-app.use(session({
-    secret: 'Shh, its a secret! cvxhsksofiss',
-    resave: false,
-    saveUninitialized: true,
-    store: MongoStore.create({
-        mongoUrl: 'mongodb://localhost/my_db',
-        ttl: 14 * 24 * 60 * 60,
-        autoRemove: 'native' 
-    })
-}))
+//app.use(session({
+//    secret: 'Shh, its a secret! cvxhsksofiss',
+//    resave: false,
+//   saveUninitialized: true,
+//   store: MongoStore.create({
+ //       mongoUrl: 'mongodb://localhost/my_db',
+  //      ttl: 14 * 24 * 60 * 60,
+//        autoRemove: 'native' 
+//    })
+//}))
 
 
 var userSchema = mongoose.Schema({
