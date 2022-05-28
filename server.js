@@ -7,7 +7,7 @@ const mongoose = require("mongoose")
 var session = require('express-session')
 const MongoStore = require("connect-mongo")
 
-mongoose.connect('mongodb://localhost/my_db')
+//mongoose.connect('mongodb://localhost/my_db')
 
 //set view engine
 app.set("view engine", "ejs")
@@ -58,8 +58,19 @@ app.get("/profile", async function(req, res){
         var sent_transfers = await transferObj.find({sender:data.email})
         var received_transfers = await transferObj.find({receiver:data.email})
         var all_transfers = sent_transfers.concat(received_transfers)
-        console.log(all_transfers)
-        res.render("profile", {data:data, all_transfers:all_transfers})
+        var incoming = 0
+        for (let i in received_transfers){
+            incoming += received_transfers[i].amount
+        }
+        var outgoing = 0
+        for (let i in sent_transfers){
+            outgoing += sent_transfers[i].amount
+        }
+
+        res.render("profile", {data:data,
+            all_transfers:all_transfers,
+            incoming: incoming,
+            outgoing: outgoing})
     }
     else{
         res.send("You must login")
@@ -163,5 +174,5 @@ app.post("/transfer", async function(req, res){
         res.send("this user doesnt exist")
     }
 })
-const port = process.env.port || 8080
+const port = process.env.port || 3000
 app.listen(port)

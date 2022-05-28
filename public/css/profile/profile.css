@@ -33,57 +33,28 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: solid 2px black;
-    border: none;
+    justify-content: space-between;
 }
 .profileHead .row #profile-name{
-    width: 40%;
     height: 30px;
-    display: flex;
-    flex-direction: row;
-    border: solid 2px black;
-    border: none;
-    
+    width: 40%;
+    margin-left: 20px;
 }
 .profileHead .row #profile-name p{
-    margin-top: 0%;
-    padding-left: 3%;
-    width: 20%;
     font-weight: 500;
-    border: solid 2px black;
-    font-size: 150%;
-    height: 50px;
-    border: none;
+    font-size: xx-large;
     color: white;
-    margin-left: 7%;
-    
+    margin-top: 0px;
 }
 .profileHead  .row #current-balance{
-    border: solid 2px black;
-    margin-left: 5%;
-    padding-left: 30%;
-    width: 100%;
+    width: 40%;
     height: 45px;
     display: flex;
     flex-direction: row;
-    border: none;
-
-
-}
-.profileHead  .row #current-balance h3{
-    font-size: 150%;
-    border: solid 2px black;
-    border: none;
-    color: white;
-    margin-top: 1%;
-    padding-left: 0%;
 }
 .profileHead  .row #current-balance p{
     font-size: 150%;
-    border: solid 2px black;
-    border: none;
     color: white;
-    margin-left: 5%;
     margin-top: 1%;
 }
 /* Navigation */
@@ -96,11 +67,9 @@ nav{
 }
 .navlist{
     width: 20%;
-    height: 400px;
     margin-top: 10px;
-    border-radius: 50px;
     text-decoration: none;
-    background-color: rgb(51, 0, 102);
+    background-image: linear-gradient(rgb(51, 0, 102), rgb(0, 51, 128),rgb(51, 0, 102) );
     position: relative;
     margin-left: 10px;
 }
@@ -110,10 +79,9 @@ nav{
     padding: 0px;
     height: 100%;
     margin: 0px;
-    background-color: rgb(51, 0, 102);
 }
 
-.navlist ul:hover{
+.navlist ul li:hover{
     background-color: white;
 }
 
@@ -121,7 +89,6 @@ nav{
     display: flex;
     font-size: larger;
     font-weight: 500;
-    border: 0.5px solid green;
     border: none;
     width: 100%;
     text-decoration: none;
@@ -130,8 +97,7 @@ nav{
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    background-color: rgb(26, 0, 51);
-    height: 20%;
+    height: 17%;
 }
 
 .navlist ul li:hover{
@@ -312,8 +278,7 @@ nav{
 }
 
 .transition{
-    border: solid 2px green;
-    height: 56%;
+    height: 100%;
     margin-top: 2%;
     border-radius: 10px;
     width: 100%;
@@ -333,20 +298,19 @@ nav{
 
 .transition ul{
     border: solid 2px white;
-    width: 96%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     border: none;
-    
-    
+    padding: 0px;
+    flex-wrap: wrap;
 }
 .transition .time{
     margin-top: 1%;
-   border-radius: 10px;
-   background-color: rgb(51, 0, 102);
-   width: 49%;
-   margin-left: -5%;
+    border-radius: 10px;
+    background-color: rgb(51, 0, 102);
+    width: 48%;
+    flex-shrink: 0;
+    margin-left: 1.5%;
 }
 .transition .time p{
     font-size: 70%;
@@ -360,12 +324,14 @@ nav{
     flex-direction: row;
     list-style: none;
     width: 100%;
+    padding-left: -10px;
 }
 .transition .time .listli .word{
     padding-left: 1%;
     font-weight: 500;
     color: rgb(217, 217, 217);
     width: 100%;
+    margin: 0px;
 
 }
 .transition .time .listli .num{ 

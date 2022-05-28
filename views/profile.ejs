@@ -17,16 +17,11 @@
                 <img src="img/FB_IMG_1593483223797.jpg" alt="">
                 <div class="row">
                     <div id="profile-name">
-                        <p><%= data.firstname %></p>
-                        <p><%= data.lastname %></p>
+                        <p><%= data.firstname %> <%= data.lastname %></p>
                     </div>
                     
                     <div id="current-balance">
-                        <h3>
-                            CURRENT BALANCE :
-                        </h3>
-                        <P> $<%= data.balance %> </P>
-                       
+                        <P>CURRENT BALANCE : $<%= data.balance %> </P>  
                     </div>
                 </div>
             </div>
@@ -36,11 +31,11 @@
             <div class="navlist">
                 <ul>
                     <li id="overview1"> <span id="overview1">Overview</span></li>
-                    <li id="social1"> <span id="social1"> <i class="fa-solid fa-money-bill bank"></i> Social <i class="fa-solid fa-angle-right erase1"></i> </span> </li>
-                    <li id="transition1"> <span id="transition1"> <i class="fa-solid fa-money-bill-trend-up bank"></i> Transaction <i class="fa-solid fa-angle-right erase2"></i> </span> </li>
-                    <li id="transfer1"> <span id="transfer1"> <i class="fa-solid fa-money-bill-transfer bank"></i> Transfer   <i class="fa-solid fa-angle-right erase3"></i></span></i></li>
-                    <li id="profile1"> <span id="profile1"> <i class="fa-solid fa-user bank"></i> Profile <i class="fa-solid fa-angle-right erase4"></i> </span> </li>
-                    <li> <span> <i class="fa-solid fa-right-to-bracket bank"></i> Logout <i class="fa-solid fa-angle-right erase5"></i></span> </li>
+                    <li id="social1"> <span id="social1">  Social <i class="fa-solid fa-angle-right erase1"></i> </span> </li>
+                    <li id="transition1"> <span id="transition1">  Transaction <i class="fa-solid fa-angle-right erase2"></i> </span> </li>
+                    <li id="transfer1"> <span id="transfer1">  Transfer   <i class="fa-solid fa-angle-right erase3"></i></span></i></li>
+                    <li id="profile1"> <span id="profile1">  Profile <i class="fa-solid fa-angle-right erase4"></i> </span> </li>
+                    <li> <span>  Logout <i class="fa-solid fa-angle-right erase5"></i></span> </li>
                 </ul>
             </div>
            
@@ -54,11 +49,11 @@
                         </div>
                         <div class="balance">
                             <h3>Income</h3>
-                            <p style="color: rgb(62, 240, 62);"> $430,230 .00</p>
+                            <p style="color: rgb(62, 240, 62);"> $<%= incoming %></p>
                         </div>
                         <div class="balance">
                             <h3>Outcome</h3>
-                            <p style="color: red;"> -$189,509 .4</p>
+                            <p style="color: red;"> -$<%= outgoing %></p>
                         </div>
                     </div>
                 </div>
@@ -140,9 +135,7 @@
                                     </div>
                                     <p> <%= transfer.timestamp %> </p>
                                 </div>
-                            <% }) %>
-        
-                           
+                            <% }) %>  
                         </ul>
                     </div>
                 </div>
